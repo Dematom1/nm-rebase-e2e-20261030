@@ -1,0 +1,9 @@
+name: sandbox-ci
+on:
+  pull_request:
+  push:
+jobs:
+  sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "sandbox CI ran at $(date -u +%FT%TZ) for $GITHUB_SHA"
